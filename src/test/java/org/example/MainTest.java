@@ -19,6 +19,18 @@ class MainTest {
         assertEquals(expected, actual);
     }
 
+    @org.junit.jupiter.api.Test
+    void add_when3Plus3_thenReturn6() {
+        // GIVEN
+        int a = 3;
+        int b = 3;
+        int expected = a + b;
+        // WHEN
+        int actual = Main.sum(a, b);
+        // THEN
+        assertEquals(expected, actual);
+    }
+
     //Write a test for a method that checks if a given number is even.
     @Test
     void checkEven_when3_thenReturnFalse() {
@@ -52,6 +64,17 @@ class MainTest {
         // THEN
         assertEquals(expected, actual);
     }
+    @org.junit.jupiter.api.Test
+    void calcProduct_when3times3_thenReturn9() {
+        // GIVEN
+        int a = 3;
+        int b = 3;
+        int expected = a * b;
+        // WHEN
+        int actual = Main.multiply(a, b);
+        // THEN
+        assertEquals(expected, actual);
+    }
 
     //Write a test for a method that converts a given string to uppercase.
     @Test
@@ -61,6 +84,17 @@ class MainTest {
         String expected = "NEUEFISCHE";
         // WHEN
         String actual = Main.convertUppercase(a);
+        // THEN
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void string_toUppercase_whenWhYiSThIsSoWeIrD_thenReturnWHYISTHISSOWEIRD() {
+        // GIVEN
+        String test = "WhYiSThIsSoWeIrD";
+        String expected = "WHYISTHISSOWEIRD";
+        // WHEN
+        String actual = Main.convertUppercase(test);
         // THEN
         assertEquals(expected, actual);
     }
@@ -82,6 +116,16 @@ class MainTest {
         int number = -5;
         // WHEN
         boolean actual = Main.checkPositive(number);
+        // THEN
+        assertFalse(actual);
+    }
+
+    @Test
+    void isPositive_whenZero_thenReturnFalse() {
+        // GIVEN
+        int a = 0;
+        // WHEN
+        boolean actual = Main.checkPositive(a);
         // THEN
         assertFalse(actual);
     }
