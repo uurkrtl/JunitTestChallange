@@ -121,12 +121,12 @@ class MainTest {
     }
 
     @Test
-    void isPositive_whenZero_thenReturnTrue() {
+    void isPositive_whenZero_thenReturnFalse() {
         // GIVEN
         int a = 0;
         // WHEN
         boolean actual = Main.checkPositive(a);
         // THEN
-        assertTrue(actual);
+        assertFalse(actual);
     }
 }
